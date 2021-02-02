@@ -1,48 +1,74 @@
 const Usuario = require('../models/usuarios')
+const UsuariosDAO = require ('../DAO/usuario-dao')
+
 
 module.exports = (app, bd) => {
+
+    const usuariosDAO = new UsuariosDAO (bd);
+
     app.get('/user', (req, res) => {
-        res.send(bd.usuarios)
+
+        usuariosDAO.listaUsuarios()
+        .then((usuarios)=>{
+            res.send(usuarios);
+        })
+        .catch((erro)=>{
+            res.send(erro)
+        })
+        /*bd.all("SELECT * FROM USUARIOS;", (error, linhas)=>{
+            if (error) throw new Error ("Erro ao consultar tabela");
+            else res.send(linhas);
+          });*/
     });
 
-    app.get('/user/:nome', (req, res) => {
-        for(let usr of bd.usuarios){
-            if(usr.nome == req.params.nome){
-                res.send(usr)
+    app.get('/user/:id', (req, res) => {
+        bd.run(
+            "SELECT * FROM USUARIOS WHERE ID = ?", req.params.id,
+            function(erro, resultado){
+                if(erro){
+                    throw new Erro(`Erro ao inserir ${erro}`)
+                } else {
+                    res.json({resultado})
+                }
             }
-        }
-        res.send(`Usuário não encontrado`);
-    });
+        )
+    });    
 
     app.post('/user', (req, res) => {
-        //utilizar o body (corpo) da requisição para criar novo usuário!
-        const usr = new Usuario (req.body.nome, req.body.email, req.body.senha);
-        bd.usuarios.push(usr);
-        res.send(`Post funcionando no user`);
+        bd.run(
+            "INSERT INTO USUARIOS (NOME, EMAIL, SENHA) VALUES (?, ?, ?)", [ req.body.nome, req.body.email, req.body.senha],
+            function (err){
+                if (err){
+                    throw new Error (`Erro ao inserir: ${err}`)
+                } else {
+                    res.send ("Usuario adicionado")
+                }
+            }
+        )
     });
 
-    app.delete('/user/:nome', (req,res) => {
-        let nDeletUser = [];
-        for (let i=0; i < bd.usuarios.length; i++){
-            if (bd.usuarios[i].nome !== req.params.nome){
-                nDeletUser.push(bd.usuarios[i])
+    app.delete('/user/:id', (req,res) => {
+        bd.run (
+        "DELETE FROM USUARIOS WHERE ID = ?", req.params.id,
+        function(erro){
+            if (erro){
+                throw new Erro (`Erro ao deletar ${erro}`)
+            } else {
+                res.send ("Usuário deletado")
             }
-        }
-        bd.usuarios = nDeletUser;
-        console.log(bd.usuarios);
-        res.send ("Rota de deleção ativada!")
+        })
     });
 
-    app.put('/user/:nome', (req,res)=> {
-        for (const users of bd.usuarios) {
-            if(req.params.nome === users.nome){
-                users.nome = req.body.nome
+    app.put('/user/:id', (req,res)=> {
+        bd.run(
+            "UPDATE USUARIOS SET NOME = ?, EMAIL = ?, SENHA = ? WHERE ID = ?", [req.body.nome, req.body.email, req.body.senha, req.params.id],
+            function(erro){
+                if(erro){
+                    throw new Erro(`Erro ao atualizar ${erro}`)
+                } else {
+                    res.send ("Usuário atualizado")
+                }
             }
-        }
-        res.send ("Ok")
-    })
-
-};
-
-
-
+        )
+    });
+    }
