@@ -4,7 +4,7 @@ module.exports = class Tarefas {
         this.titulo = titulo;
         this.descricao = descricao;
         this.status = status;
-        this.criacao = criacao
+        this.criacao = criacao;
     }
 }
 

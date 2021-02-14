@@ -1,74 +1,58 @@
 const Usuario = require('../models/usuarios')
-const UsuariosDAO = require ('../DAO/usuario-dao')
-
+const UsuariosDAO = require('../DAO/usuario-dao')
 
 module.exports = (app, bd) => {
 
-    const usuariosDAO = new UsuariosDAO (bd);
-
-    app.get('/user', (req, res) => {
-
-        usuariosDAO.listaUsuarios()
-        .then((usuarios)=>{
+    const usuariosDAO = new UsuariosDAO(bd);
+    //OK
+    app.get('/user', async (req, res) => {
+        try {
+            const usuarios = await usuariosDAO.listaUsuarios()
             res.send(usuarios);
-        })
-        .catch((erro)=>{
+        }
+        catch (erro) {
             res.send(erro)
-        })
-        /*bd.all("SELECT * FROM USUARIOS;", (error, linhas)=>{
-            if (error) throw new Error ("Erro ao consultar tabela");
-            else res.send(linhas);
-          });*/
+        }
     });
-
-    app.get('/user/:id', (req, res) => {
-        bd.run(
-            "SELECT * FROM USUARIOS WHERE ID = ?", req.params.id,
-            function(erro, resultado){
-                if(erro){
-                    throw new Erro(`Erro ao inserir ${erro}`)
-                } else {
-                    res.json({resultado})
-                }
-            }
-        )
-    });    
-
-    app.post('/user', (req, res) => {
-        bd.run(
-            "INSERT INTO USUARIOS (NOME, EMAIL, SENHA) VALUES (?, ?, ?)", [ req.body.nome, req.body.email, req.body.senha],
-            function (err){
-                if (err){
-                    throw new Error (`Erro ao inserir: ${err}`)
-                } else {
-                    res.send ("Usuario adicionado")
-                }
-            }
-        )
+    //OK
+    app.get('/user/:id', async(req, res) => {
+        try{
+            const usuarioParametro = await usuariosDAO.listaUsuarioParams(req.params.id)
+            res.send(usuarioParametro)
+        }
+        catch(erro){
+            res.send(erro)
+        }
     });
-
-    app.delete('/user/:id', (req,res) => {
-        bd.run (
-        "DELETE FROM USUARIOS WHERE ID = ?", req.params.id,
-        function(erro){
-            if (erro){
-                throw new Erro (`Erro ao deletar ${erro}`)
-            } else {
-                res.send ("Usuário deletado")
-            }
-        })
+    //OK
+    app.post('/user', async (req, res) => {
+        try {
+            const inserirUsuario = await usuariosDAO.inserindoUsuarios([req.body.nome, req.body.email, req.body.senha])
+            res.send(inserirUsuario)
+        }
+        catch (erro) {
+            res.send(erro)
+        }
     });
-
-    app.put('/user/:id', (req,res)=> {
-        bd.run(
-            "UPDATE USUARIOS SET NOME = ?, EMAIL = ?, SENHA = ? WHERE ID = ?", [req.body.nome, req.body.email, req.body.senha, req.params.id],
-            function(erro){
-                if(erro){
-                    throw new Erro(`Erro ao atualizar ${erro}`)
-                } else {
-                    res.send ("Usuário atualizado")
-                }
-            }
-        )
+    //OK
+    app.delete('/user/:id', async (req, res) => {
+        try {
+            const deletarUsuario = await usuariosDAO.deletandoUsuarios(req.params.id)
+            res.send(deletarUsuario)
+        }
+        catch(erro){
+            res.send(erro)
+        }
     });
-    }
+    //OK
+    app.put('/user/:id', async(req, res) => {
+        try {
+            const atualizaUsuario = await usuariosDAO.atualizandoUsuario([req.body.nome, req.body.email, req.body.senha, req.params.id])
+            res.send(atualizaUsuario)
+        }
+        catch(erro){
+            res.send(erro)
+        }
+    });
+}
+
