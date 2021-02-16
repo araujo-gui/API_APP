@@ -1,10 +1,11 @@
-module.exports = class Tarefas {
+/*module.exports = class Tarefas {
 
-    constructor (titulo, descricao, status, criacao){
+    constructor (titulo, descricao, status, datacriacao, id_usuario){
         this.titulo = titulo;
         this.descricao = descricao;
         this.status = status;
-        this.criacao = criacao;
+        this.datacriacao = datacriacao;
+        this.id_usuario = id_usuario;
     }
 }
 

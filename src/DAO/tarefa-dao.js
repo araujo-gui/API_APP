@@ -12,38 +12,38 @@ module.exports = class TarefasDAO {
             })
         })
     }
-    //Ver porque não está puxando id isolado.
+    //OK
     listaTarefaParams(tarefaParams){
         return new Promise((resolve, reject)=>{
-            this.db.all("SELECT * FROM USUARIOS WHERE ID = ?", tarefaParams, (error, linhas)=>{
-                if(error) reject("Erro ao acessar tarefas");
+            this.db.all("SELECT * FROM TAREFAS WHERE ID = ?", tarefaParams, (error, linhas)=>{
+                if(error) reject(error);
                 else resolve(linhas)
             } )
         })
     }
-    //Verificar erro no adicionar tarefas
+    //OK
     inserindoTarefas(adicionandoTarefa){
         return new Promise((resolve,reject)=>{
-            this.db.all("INSERT INTO TAREFAS (TITULO, DESCRICAO, STATUS, DATADACRIACAO) VALUES (?, ?, ?, ?)", adicionandoTarefa, (error)=>{
-                if(error) reject("Erro ao adicionar tarefas")
+            this.db.run("INSERT INTO TAREFAS (TITULO, DESCRICAO, STATUS, DATACRIACAO, ID_USUARIO) VALUES (?, ?, ?, ?, ?)", adicionandoTarefa, (error)=>{
+                if(error) reject("Erro ao inserir tarefas")
                 else resolve ("Tarefa adicionada")
             })
         })
     }
-    //Verificar erro em deletar
+    //OK
     deletandoTarefas(deletaTarefa){
         return new Promise((resolve, reject)=>{
-            this.db.all("DELETE FROM TAREFAS WHERE ID = ?", deletaTarefa, (error)=>{
+            this.db.run("DELETE FROM TAREFAS WHERE ID = ?", deletaTarefa, (error)=>{
                 if(error) reject("Erro ao deletar tarefas")
                 else resolve ("Tarefa deletada")
             })
         })
     }
-    //verificar erro para atualizar
+    //OK
     atualizandoTarefa(atualizarTarefa){
         return new Promise((resolve, reject)=>{
-            this.db.all("UPDATE TAREFAS SET TITULO = ?, DESCRICAO = ?, STATUS = ?, DATACRIACAO = ?, WHERE ID = ?", atualizarTarefa, (error)=>{
-                if(error) reject("Erro ao atualizar tarefas")
+            this.db.run("UPDATE TAREFAS SET TITULO = ?, DESCRICAO = ?, STATUS = ?, DATACRIACAO = ?, ID_USUARIO = ? WHERE ID = ?", atualizarTarefa, (error)=>{
+                if(error) reject(error)
                 else resolve ("Tarefa atualizada")
             })
         })

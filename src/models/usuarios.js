@@ -1,4 +1,4 @@
-module.exports = class Usuarios {
+/*module.exports = class Usuarios {
 
     constructor (nome, email, senha){
         this.nome = nome;

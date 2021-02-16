@@ -1,4 +1,4 @@
-const Tarefa = require('../models/tarefas')
+//const Tarefa = require('../models/tarefas')
 const TarefasDAO = require('../DAO/tarefa-dao')
 
 module.exports = (app, bd) => {
@@ -15,20 +15,20 @@ module.exports = (app, bd) => {
         }
     })
 
-    //Verificar porque não está puxando ID isolado.
+    //OK
     app.get('/tarefas/:id', async (req, res) => {
         try {
-            const tarefaParametro = await tarefaDAO.listaTarefas(req.params.id)
+            const tarefaParametro = await tarefaDAO.listaTarefaParams(req.params.id)
             res.send(tarefaParametro)
         }
         catch (erro) {
             res.send(erro)
         }
     });
-    //Verificar o erro ao inserir usuário
+    //OK
     app.post('/tarefas', async (req, res) => {
         try {
-            const inserirTarefas = await tarefaDAO.inserindoTarefas([req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao])
+            const inserirTarefas = await tarefaDAO.inserindoTarefas([req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.id_usuario])
             res.send(inserirTarefas)
         }
         catch (erro) {
@@ -36,8 +36,8 @@ module.exports = (app, bd) => {
         }
     })
 
-    //verificar erro para deletar
-    app.delete('/tarefas/:id', async(req, resp) => {
+    //OK
+    app.delete('/tarefas/:id', async(req, res) => {
         try{
             const deletarTarefas = await tarefaDAO.deletandoTarefas(req.params.id)
             res.send(deletarTarefas)
@@ -47,10 +47,10 @@ module.exports = (app, bd) => {
         }
     });
 
-    //verificar erro para atualizar
+    //Ok
     app.put('/tarefas/:id', async(req, res) => {
         try{
-            const atualizaTarefa = await tarefaDAO.atualizandoTarefa([req.body.titulo, req.body.descricao,  req.body.status, req.body.datacriacao, req.params.id])
+            const atualizaTarefa = await tarefaDAO.atualizandoTarefa([req.body.titulo, req.body.descricao,  req.body.status, req.body.datacriacao, req.body.id_usuario, req.params.id])
             res.send(atualizaTarefa)
         }
         catch(erro){
