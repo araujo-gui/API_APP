@@ -1,4 +1,4 @@
-<h1><b>TO DO API</b></h1>
+<h1 align="center"><b>TO DO API</b></h1>
 
 <p>É um projeto de fim de módulo sobre Back-end, para a implementação de uma API.</p>
 
