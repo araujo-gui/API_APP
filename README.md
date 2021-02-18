@@ -71,4 +71,4 @@ Devendo ser feito, por meio, da ferramenta insomnia ou postman. Da seguinte form
 - http://localhost:8080/user/id
 - http://localhost:8080/tarefas/id
 
-E devesse utilizar também o JSON, que por meio do id irá fazer as devidas modificações, que serão inseridas e atualizadas pelo JSON. Sendo utilizado para atualizar os dados de usuários e tarefas. </p>
+E deve ser utilizar também o JSON, que por meio do id irá fazer as devidas modificações, que serão inseridas e atualizadas pelo JSON. Sendo utilizado para atualizar os dados de usuários e tarefas. </p>
