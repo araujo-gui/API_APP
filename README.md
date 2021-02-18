@@ -5,9 +5,9 @@
 <h2>Como utilizar e fazer com que funcione o projeto?</h2>
 <h3>Vou te contar, chega ai! </h3>
 
-<p><b>Para ser iniciado, utilize os seguintes comandos: </b><br>
+<h4><b>Para ser iniciado, utilize os seguintes comandos: </b><br>
 <br>npm install -> no terminal dentro da pasta que está rodando o projeto, que instalará todas as dependências do projeto.
-<br>npm start-> que dará início ao NODEMOM, facilitando a inicialiazação do servidor</p>
+<br>npm start-> que dará início ao NODEMOM, facilitando a inicialiazação do servidor</h4>
 
 <h3>Agora vamos as rotas de acesso</h3>
 
