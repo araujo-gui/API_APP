@@ -1,8 +1,8 @@
-<title><b>TO DO API</b></title>
+<h1><b>TO DO API</b></h1>
 
 <p>É um projeto de fim de módulo sobre Back-end, para a implementação de uma API.</p>
 
-<h1>Como utilizar e fazer com que funcione o projeto?</h1>
+<h2>Como utilizar e fazer com que funcione o projeto?</h2>
 <h2>Vou te contar, chega ai! </h2>
 
 <p><b>Para ser iniciado, utilize os seguintes comandos: </b><br>
