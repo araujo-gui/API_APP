@@ -28,6 +28,11 @@
 O caminhos citados acima, podem ser utilizados pelas plataformas:<br>
   - Insomnia 
   - Postman
+
+Além disso, o método GET pode ser utilzado para que seja acessado um dado específico, por meio do ID do dado criado. 
+Abaixo a forma de requisição de um dado por ID:
+- http://localhost:8080/user/id
+- http://localhost:8080/tarefas/id
 </p>
 
 <h2>POST</h2>
