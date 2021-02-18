@@ -20,6 +20,14 @@
 <p>Todas as rotas utilizadas, foram criadas para a criação de uma API REST. Que tem como utilzação os verbos HTTP GET, POST, DELETE E PUT, agora vem comigo que te ensino a como utilizar cada método.</p>
 
 <h2>GET</h2>
+<p>A utilização do método GET, tem como objetivo mostrar todas as informações existentes na API.</p><br>
+<p> A forma de utilizar a requisição, em tarefas ou usuários é da seguinte forma:<br>
+  - http://localhost:8080/user <br>
+  - http://localhost:8080/tarefas <br>
+O caminhos citados acima, podem ser utilizados pelas plataformas:<br>
+  - Insomnia 
+  - Postman
+</p>
 
 <h2>POST</h2>
 
