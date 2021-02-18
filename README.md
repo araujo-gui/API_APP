@@ -2,7 +2,7 @@
 
 <p>É um projeto de fim de módulo sobre Back-end, para a implementação de uma API.</p>
 
-<h2>Ferramentas utilizadas:</h2><br>
+<h2 align="center">Ferramentas utilizadas:</h2><br>
 - express<br>
 - body-parse<br>
 - sqlite<br>
