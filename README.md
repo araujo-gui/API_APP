@@ -5,7 +5,7 @@
 <h1>Como iniciar o projeto?</h1>
 <h2>Vou te contar, chega ai! </h2>
 
-<p><b>Primeiro para ser iniciado: </b>
+<p><b>Primeiro para ser iniciado: </b><br>
 <br>npm install -> no terminal dentro da pasta que está rodando o projeto, que instalará todas as dependências do projeto.
 <br>npm start-> que dará início ao NODEMOM, facilitando a inicialiazação do servidor</p>
 
