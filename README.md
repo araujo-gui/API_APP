@@ -54,6 +54,7 @@ A forma de adiçào de novos dados, é utilzado o JSON, como abaixo:<br>
 "status":"pendente",<br>
 "datacriacao":"AAAA-MM-DD",<br>
 "id_usuario":"1"<br>
+}
 </p>
 
 <h2>DELETE</h2>
