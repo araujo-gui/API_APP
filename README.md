@@ -39,7 +39,7 @@ Abaixo a forma de requisição de um dado por ID:
 <h2>POST</h2>
 <p>A utilização do método POST, é para que se possa incluir dados novos a API. Que no caso serão novos usuários ou novas tarefas.
 
-A forma de adiçào de novos dados, é utilzado o JSON, como abaixo:<br>
+A forma de adição de novos dados, é utilzando o JSON, como abaixo:<br>
 <b>NOVO USUÁRIO:<b><br>
 {<br>
 "nome":"nome1",<br>
@@ -58,5 +58,6 @@ A forma de adiçào de novos dados, é utilzado o JSON, como abaixo:<br>
 </p>
 
 <h2>DELETE</h2>
+<p></p>
 
 <h2>PUT</h2>
