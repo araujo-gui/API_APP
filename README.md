@@ -22,6 +22,7 @@
 <h2>GET</h2>
 <p>A utilização do método GET, tem como objetivo mostrar todas as informações existentes na API.</p><br>
 <p> A forma de utilizar a requisição, em tarefas ou usuários é da seguinte forma:<br>
+  
   - http://localhost:8080/user <br>
   - http://localhost:8080/tarefas <br>
  
