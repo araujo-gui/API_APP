@@ -24,6 +24,7 @@
 <p> A forma de utilizar a requisição, em tarefas ou usuários é da seguinte forma:<br>
   - http://localhost:8080/user <br>
   - http://localhost:8080/tarefas <br>
+ 
 O caminhos citados acima, podem ser utilizados pelas plataformas:<br>
   - Insomnia 
   - Postman
