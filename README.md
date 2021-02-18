@@ -58,6 +58,11 @@ A forma de adição de novos dados, é utilzando o JSON, como abaixo:<br>
 </p>
 
 <h2>DELETE</h2>
-<p></p>
+<p>A utilização do método DELETE, é para deletar qualquer usuário ou tarefas existentes na API.<br>
+A forma de se deletar um usuário ou tarefas, é da seguinte forma:<br>
+- http://localhost:8080/user/id <br>
+- http://localhost:8080/tarefas/id <br> 
+
+Lembrando, que aonde está escrito id devesse colocar o número da id referente ao dado a ser excluído, e todo dado seja de usuário ou tarefas tem um id único, ou seja, nunca haverá substituição de id.</p>
 
 <h2>PUT</h2>
