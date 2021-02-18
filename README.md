@@ -1,4 +1,4 @@
-<h1><b>TO DO API</h1>
+<h1><b>TO DO API</b></h1>
 
 <p>É um projeto de fim de módulo sobre Back-end, para a implementação de uma API.</p>
 
@@ -7,7 +7,7 @@
 
 <p>Primeiro para ser iniciado -> utilize os comandos npm install, no terminal dentro da pasta que está rodando o projeto.</p>
 <p>Após isso, todas as dependências serão baixadas e facilitarão a utilização da API. </p>
-<p>E temos apenas mais um passo, após baixar o npm, coloque o comando<font color="red">NPM START</font>, que dará início ao NODEMOM</p>
+<p>E temos apenas mais um passo, após baixar o npm, coloque o comando NPM START, que dará início ao NODEMOM</p>
 
 <h1>Agora vamos as rotas de acesso</h1>
 
