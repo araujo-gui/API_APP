@@ -23,8 +23,8 @@
 <p>A utilização do método GET, tem como objetivo mostrar todas as informações existentes na API.</p><br>
 <p> A forma de utilizar a requisição, em tarefas ou usuários é da seguinte forma:<br>
   
-  - http://localhost:8080/user, <br>
-  - http://localhost:8080/tarefas, <br>
+  - http://localhost:8080/user <br>
+  - http://localhost:8080/tarefas <br>
  
 O caminhos citados acima, podem ser utilizados pelas plataformas:<br>
   - Insomnia 
@@ -32,11 +32,12 @@ O caminhos citados acima, podem ser utilizados pelas plataformas:<br>
 
 Além disso, o método GET pode ser utilzado para que seja acessado um dado específico, por meio do ID do dado criado. 
 Abaixo a forma de requisição de um dado por ID:
-- http://localhost:8080/user/id, <br>
-- http://localhost:8080/tarefas/id, <br>
+- http://localhost:8080/user/id <br>
+- http://localhost:8080/tarefas/id <br>
 </p>
 
 <h2>POST</h2>
+<p></p>
 
 <h2>DELETE</h2>
 
