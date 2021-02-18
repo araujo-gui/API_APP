@@ -6,8 +6,8 @@
 <h2>Vou te contar, chega ai! </h2>
 
 <p><b>Primeiro para ser iniciado: </b>
-npm install -> no terminal dentro da pasta que está rodando o projeto, que instalará todas as dependências do projeto.
-npm start-> que dará início ao NODEMOM, facilitando a inicialiazação do servidor</p>
+<br>npm install -> no terminal dentro da pasta que está rodando o projeto, que instalará todas as dependências do projeto.
+<br>npm start-> que dará início ao NODEMOM, facilitando a inicialiazação do servidor</p>
 
 <h1>Agora vamos as rotas de acesso</h1>
 
