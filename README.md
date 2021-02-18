@@ -2,11 +2,11 @@
 
 <p>É um projeto de fim de módulo sobre Back-end, para a implementação de uma API.</p>
 
-<h2>Ferramentas utilizadas:</h2><br>
-- express<br>
+<h2>Ferramentas utilizadas:</h2>
+<p>- express<br>
 - body-parse<br>
 - sqlite<br>
-- cors<br>
+- cors</p>
 
 <h1>Como utilizar e fazer com que funcione o projeto?</h1>
 <h2>Vou te contar, chega ai! </h2>
