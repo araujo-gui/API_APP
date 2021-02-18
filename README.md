@@ -17,4 +17,4 @@
 
 <h2>Agora vamos as rotas de acesso</h2>
 
-<p>Todas as rotas utilizadas, foram criadas para a criação de uma API REST. Que tem como utilzação os métodos HTTP GET, POST, DELETE E PUT, agora vem comigo que te ensino a como utilizar cada método.</p>
+<p>Todas as rotas utilizadas, foram criadas para a criação de uma API REST. Que tem como utilzação os verbos HTTP GET, POST, DELETE E PUT, agora vem comigo que te ensino a como utilizar cada método.</p>
