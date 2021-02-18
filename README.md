@@ -41,19 +41,19 @@ Abaixo a forma de requisição de um dado por ID:
 
 A forma de adiçào de novos dados, é utilzado o JSON, como abaixo:<br>
 <b>NOVO USUÁRIO:<b>
-{
-"nome":"nome1",
-"email":"nome1@email.com",
-"senha":"senha123""
+{<br>
+"nome":"nome1",<br>
+"email":"nome1@email.com",<br>
+"senha":"senha123"<br>
 }
   
 <b>NOVA TAREFA</b>
-{
-"titulo":"nova tarefa",
-"descricao":"mais uma tarefa",
-"status":"pendente",
-"datacriacao":"AAAA-MM-DD",
-"id_usuario":"1"
+{<br>
+"titulo":"nova tarefa",<br>
+"descricao":"mais uma tarefa",<br>
+"status":"pendente",<br>
+"datacriacao":"AAAA-MM-DD",<br>
+"id_usuario":"1"<br>
 </p>
 
 <h2>DELETE</h2>
